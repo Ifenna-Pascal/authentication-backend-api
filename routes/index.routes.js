@@ -1,10 +1,11 @@
 const UserRoute = require("./user.routes");
+const BookRoute = require('./book.route')
 
 const basePath = '/api/v1';
 
 module.exports = (app) => {
   app.use(`${basePath}/users`, UserRoute);
-  // app.use(`${basePath}/books`, BookRoute);
+  app.use(`${basePath}/books`, BookRoute);
 
   app.get(`${basePath}/docs`, (req, res) => {
 
